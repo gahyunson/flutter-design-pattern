@@ -7,6 +7,19 @@ import 'template_method/json_processor.dart';
 
 
 void main() {
+  // final type = 1;
+
+  // final context = AlgorithmContext();
+  // switch (type) {
+  //   case 1:
+  //     context.setStrategy(CSVAlgorithm());
+  //     break;
+  //   case 2:
+  //     context.setStrategy(JsonAlgorithm());
+  //     break;
+  // }
+  // context.executeAlgorithm();
+  
   // strategy pattern run
   final context = AlgorithmContext();
   context.setStrategy(CSVAlgorithm());
@@ -14,6 +27,7 @@ void main() {
 
   context.setStrategy(JsonAlgorithm());
   context.executeAlgorithm();
+
 
   // template method pattern run
   // final csv = CSVProcessor();

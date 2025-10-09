@@ -1,9 +1,9 @@
 import 'abstract_algorithm.dart';
 
 
-class CSVAlgorithm extends AbstractAlgorithm {  
+class CSVAlgorithm implements AbstractAlgorithm {  
   @override
-  void process() {
+  void process(bool isData) {
     print("CSV Algorithme is selected");
   }
 }

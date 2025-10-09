@@ -9,6 +9,6 @@ class AlgorithmContext {
   }
 
   void executeAlgorithm() {
-    _strategy?.process();
+    _strategy?.process(true);
   }
 }

@@ -1,3 +1,3 @@
-abstract class AbstractAlgorithm {
-  void process();
+abstract interface class AbstractAlgorithm {
+  void process(bool isData);
 }
