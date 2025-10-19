@@ -1,20 +1,13 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter_design_pattern/decorator/decorator.dart';
+import 'package:flutter_design_pattern/inherits/mixin.dart';
 
 void main() {
-  Coffee americano = Americano();
-  // Coffee americanoAddShot = AmericanoAddShot(americano);
-  // Coffee americanoAddSugar = AmericanoAddSugar(americano);
-  // print(americanoAddShot.getCoffee());
-  // print(americanoAddShot.getPrice());
-  // print(americanoAddSugar.getCoffee());
-  // print(americanoAddSugar.getPrice());
-  Coffee addShotDecorator = AmericanoAddShotDecorator(americano);
-  Coffee addSugarDecorator = AmericanoAddSugarDecorator(americano);
+  print(EthiopiaProduct().harvest());
+  print(EthiopiaProduct().roast());
+  print(EthiopiaProduct().drip());
+  print(EthiopiaProduct().address());
 
-  print(addShotDecorator.getCoffee());
-  print(addSugarDecorator.getCoffee());
   runApp(const MyApp());
 }
 

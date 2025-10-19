@@ -1,3 +1,16 @@
+// Coffee americano = Americano();
+// // Coffee americanoAddShot = AmericanoAddShot(americano);
+// // Coffee americanoAddSugar = AmericanoAddSugar(americano);
+// // print(americanoAddShot.getCoffee());
+// // print(americanoAddShot.getPrice());
+// // print(americanoAddSugar.getCoffee());
+// // print(americanoAddSugar.getPrice());
+// Coffee addShotDecorator = AmericanoAddShotDecorator(americano);
+// Coffee addSugarDecorator = AmericanoAddSugarDecorator(americano);
+
+// print(addShotDecorator.getCoffee());
+// print(addSugarDecorator.getCoffee());
+
 abstract class Coffee {
   String getCoffee();
   int getPrice();
