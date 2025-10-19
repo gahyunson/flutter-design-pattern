@@ -1,0 +1,8 @@
+{
+  "on_save": [
+    {
+      "glob": "lib/**/*.dart",
+      "task": "Flutter Hot Reload Watcher"
+    }
+  ]
+}

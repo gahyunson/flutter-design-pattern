@@ -1,42 +1,21 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutterstudy/strategy/algorithm_context.dart';
-import 'package:flutterstudy/strategy/csv_algorithm.dart';
-import 'package:flutterstudy/strategy/json_algorithm.dart';
-import 'template_method/csv_processor.dart';
-import 'template_method/json_processor.dart';
-
+import 'package:flutter_design_pattern/decorator/decorator.dart';
 
 void main() {
-  // final type = 1;
+  Coffee americano = Americano();
+  // Coffee americanoAddShot = AmericanoAddShot(americano);
+  // Coffee americanoAddSugar = AmericanoAddSugar(americano);
+  // print(americanoAddShot.getCoffee());
+  // print(americanoAddShot.getPrice());
+  // print(americanoAddSugar.getCoffee());
+  // print(americanoAddSugar.getPrice());
+  Coffee addShotDecorator = AmericanoAddShotDecorator(americano);
+  Coffee addSugarDecorator = AmericanoAddSugarDecorator(americano);
 
-  // final context = AlgorithmContext();
-  // switch (type) {
-  //   case 1:
-  //     context.setStrategy(CSVAlgorithm());
-  //     break;
-  //   case 2:
-  //     context.setStrategy(JsonAlgorithm());
-  //     break;
-  // }
-  // context.executeAlgorithm();
-  
-  // strategy pattern run
-  final context = AlgorithmContext();
-  context.setStrategy(CSVAlgorithm());
-  context.executeAlgorithm();
-
-  context.setStrategy(JsonAlgorithm());
-  context.executeAlgorithm();
-
-
-  // template method pattern run
-  // final csv = CSVProcessor();
-  // final json = JSONProcessor();
-
-  // csv.process();
-  // print("Above is CSV --------- Below is Json");
-  // json.process();
-  // runApp(const MyApp());
+  print(addShotDecorator.getCoffee());
+  print(addSugarDecorator.getCoffee());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -65,7 +44,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'd'),
     );
   }
 }

@@ -1,0 +1,13 @@
+{
+  "version": "0.1",
+  "tasks": [
+    {
+      "label": "Flutter Hot Reload Watcher",
+      "command": "./hotreload.sh",
+      "type": "shell",
+      "run": "background",
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
