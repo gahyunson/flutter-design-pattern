@@ -1,12 +1,14 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_design_pattern/composite/composite.dart';
 import 'package:flutter_design_pattern/inherits/mixin.dart';
 
 void main() {
-  print(EthiopiaProduct().harvest());
-  print(EthiopiaProduct().roast());
-  print(EthiopiaProduct().drip());
-  print(EthiopiaProduct().address());
+  Window decoratedWindow = new VerticalScrollBarDecorator(
+    new HorizontalScrollBarDecorator(new SimpleWindow()),
+  );
+  decoratedWindow.draw();
+  print(decoratedWindow.getDescription());
 
   runApp(const MyApp());
 }
