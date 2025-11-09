@@ -1,6 +1,12 @@
 import 'abstract_algorithm.dart';
 
+// Command strategy pattern run at main.dart
+// final context = AlgorithmContext();
+// context.setStrategy(CSVAlgorithm());
+// context.executeAlgorithm();
 
+// context.setStrategy(JsonAlgorithm());
+// context.executeAlgorithm();
 class AlgorithmContext {
   AbstractAlgorithm? _strategy;
 

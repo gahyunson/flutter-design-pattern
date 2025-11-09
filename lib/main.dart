@@ -1,16 +1,15 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter_design_pattern/composite/composite.dart';
-import 'package:flutter_design_pattern/inherits/mixin.dart';
+import 'package:flutter_design_pattern/singleton/index.dart';
+import 'package:flutter_design_pattern/state/index.dart';
+import 'package:flutter_design_pattern/proxy/index.dart';
+
+enum Environment { dev, prod }
 
 void main() {
-  Window decoratedWindow = new VerticalScrollBarDecorator(
-    new HorizontalScrollBarDecorator(new SimpleWindow()),
-  );
-  decoratedWindow.draw();
-  print(decoratedWindow.getDescription());
-
-  runApp(const MyApp());
+  // runApp(const MyApp());
+  final app = Application();
+  app.init();
 }
 
 class MyApp extends StatelessWidget {
